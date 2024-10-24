@@ -10,4 +10,10 @@ class Persona extends Model
      public function documento(){
         return $this->belongsTo(Documento::class);
     }
+    public function proveedore(){
+        return $this->hasOne(Proveedore::class);
+    }
+    public function cliente(){
+        return $this->hasOne(Cliente::class);
+    }
 }
