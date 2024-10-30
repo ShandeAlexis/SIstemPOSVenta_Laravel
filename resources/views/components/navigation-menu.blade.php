@@ -55,9 +55,13 @@
                     <div class="sb-nav-link-icon"><i class="fa-solid fa-tag"></i></div>
                     Categorias
                 </a>
+                <a class="nav-link" href="{{ route('presentaciones.index') }}">
+                    <div class="sb-nav-link-icon"><i class="fas fa-user-alt"></i></div>
+                    Presentaciones
+                </a>
                 <a class="nav-link" href="#">
-                    <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                    Tables
+                    <div class="sb-nav-link-icon"><i class="fas fa-marker"></i></div>
+                    Marcas
                 </a>
             </div>
         </div>
