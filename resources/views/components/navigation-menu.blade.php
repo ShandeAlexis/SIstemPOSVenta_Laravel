@@ -59,7 +59,7 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-user-alt"></i></div>
                     Presentaciones
                 </a>
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{ route('marcas.index') }}">
                     <div class="sb-nav-link-icon"><i class="fas fa-marker"></i></div>
                     Marcas
                 </a>
