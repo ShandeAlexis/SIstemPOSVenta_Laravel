@@ -20,7 +20,8 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        return view('producto.index');
+        $productos = Producto::with(['categorias.caracteristica','marca.caracteristica','presentacione.caracteristica'])->latest()->get();
+        return view('producto.index', compact('productos'));
     }
 
     /**
@@ -68,6 +69,7 @@ class ProductoController extends Controller
                 'img_path'=> $name,
                 'marca_id'=> $request->marca_id,
                 'presentacione_id'=> $request->presentacione_id,
+                'fecha_vencimiento' => $request->fecha_vencimiento,
             ]);
 
             $producto->save();
