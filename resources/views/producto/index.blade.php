@@ -103,7 +103,7 @@
                         </tr>
                         <!-- modal !-->
                         <div class="modal fade" id="verModal-{{ $item->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
+                            <div class="modal-dialog modal-dialog-scrollable">
                               <div class="modal-content">
                                 <div class="modal-header">
                                   <h1 class="modal-title fs-5" id="exampleModalLabel">Detalle producto</h1>
@@ -120,10 +120,12 @@
                                     <label for=""><span class="fw-bolder">Stock: </span>{{ $item->stock }}</label>
                                   </div>
                                   <div class="row mb-3">
-                                    <label for="">Imagen:</label>
+                                    <label class="fw-bolder" for="">Imagen:</label>
                                     <div>
                                         @if ($item->img_path != null)
-                                            <img src="{{ Storage::url('app/private/public/productos/'.$item->img_path) }}" alt="">
+                                            <img src="{{ Storage::url('public/productos/'.$item->img_path) }}" alt="{{ $item->nombre }}" class=" img-fluid img-thumbnail border border-4 rounded">
+                                        @else
+                                            <img src="" alt="{{ $item->nombre }}">
                                         @endif
                                     </div>
                                   </div>
